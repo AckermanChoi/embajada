@@ -28,6 +28,13 @@ def get_index(request: Request):
         }
     )
 
+@app.get("/residentes/nuevo", response_class=HTMLResponse)
+def nuevo_residente(request: Request):
+    return templates.TemplateResponse(
+        "pages/nuevo_residente.html",
+        {"request": request}
+    )
+
 from app.database import (
     fetch_all_residentes
 )
