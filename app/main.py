@@ -95,5 +95,3 @@ def get_index(request: Request):
             "residentes": residentes
         }
     )
-
-
